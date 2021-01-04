@@ -1,0 +1,14 @@
+NBA Fantasy Basketball Calculator
+
+I made this web application because I was starting an NBA fantasy league, and although Yahoo sports did provide player statistics and custom fantasy points, it only showed
+data for 2019-2020 season and project stats. My strategy in fantasy is to choose players that consistently put up good stats and also play lots of games, so the per game stats that Yahoo sports shows was not good enough information, I needed to see a player's history in previous seasons and also see their total fantasy points for the season, not just per game. 
+
+Therefore I made this web application using React, Node, Express, and MySQL.
+
+Because this is the backend, I will document the web application's data storage.
+
+Source: basketball-reference.com (all my data has been downloaded from this website)
+
+For my data storage, I decided to use a local storage and decided on MySQL. I created 10 tables in total, 5 tables were total statistics of the previous 5 NBA seasons, and the other 5 were per game statistics of the previous 5 NBA seasons. I initially wanted to just use 5 tables to save memory space and would later do simple calculations to determine per game stats in the frontend, but for some reason the MUIDataTable's sorting functionality would break, therefore I thought it best to keep it safe and just create another 5 tables.
+
+I used Node and Express to access the MySQL data, since this is a simple web application to display statistics, there is one GET route used in this entire application.
